@@ -19,7 +19,7 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color:rgba(180, 108, 108, 0.507);  /* Background color for the entire website, including individual sections */
+  --background-color:rgba(190, 185, 185, 0.077);  /* Background color for the entire website, including individual sections */
   --default-color: rgba(20, 19, 19, 0.808);/* Default color used for the majority of the text content across the entire website */
   --heading-color: rgb(239, 155, 169); /* Color for headings, subheadings and title throughout the website */
   --accent-color: rgba(10, 10, 10, 0.69) ;/* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -659,9 +659,9 @@ body {
   color: #555;
 }
 
-.hero img {
-  max-width: 700px; /* Adjust as needed */
-  border-radius: 50px; /* Rounded square effect */
+.img-hero {
+  max-width: 400px; /* Adjust as needed */
+  border-radius: 30px; /* Rounded square effect */
   border: 5px solid #cc319352; /* Optional border color */
 }
 
@@ -683,7 +683,7 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
-  .hero img {
+  .img-hero {
     margin-top: 20px;
     margin-right: 0;
   }
@@ -889,7 +889,7 @@ body {
 --------------------------------------------------------------*/
 .starter-section {
   .profile-image {
-    margin: 20px auto;
+    margin:auto;
   }
 
   .profile-image img {
@@ -917,4 +917,9 @@ body {
 
 .carousel {
   max-width: 100%; /* Allow the carousel to take up the full space inside its container */
+}
+
+.img-thumbnail {
+  max-width: 100%;
+  height: auto;
 }
