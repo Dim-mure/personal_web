@@ -19,7 +19,7 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color:rgba(18, 11, 11, 0.001);  /* Background color for the entire website, including individual sections */
+  --background-color:rgba(180, 108, 108, 0.507);  /* Background color for the entire website, including individual sections */
   --default-color: rgba(20, 19, 19, 0.808);/* Default color used for the majority of the text content across the entire website */
   --heading-color: rgb(239, 155, 169); /* Color for headings, subheadings and title throughout the website */
   --accent-color: rgba(10, 10, 10, 0.69) ;/* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -848,9 +848,6 @@ body {
   bottom: 0;
 }
 
-
-<!-- Custom CSS for Contact Section -->
-  <style>
     .contact-container {
       background-color: #f0f0f0; /* Light gray background */
       background-image: url('assets/img/contact-bg.jpg'); /* Replace with your image path */
@@ -860,7 +857,7 @@ body {
     }
 
     .info-item {
-      background-color: rgba(255, 255, 255, 0.8); /* White background with opacity */
+      background-color: rgba(138, 0, 0, 0.529); /* White background with opacity */
       border-radius: 8px;
       padding: 15px;
       margin-bottom: 15px;
