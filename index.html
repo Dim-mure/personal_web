@@ -30,10 +30,7 @@
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">DIM</h1>
       </a>
 
@@ -50,42 +47,50 @@
 
       <div class="header-social-links">
         <a href="https://x.com/irishmay_mrtnz" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="www.facebook.com/profi" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://web.facebook.com/profile.php?id=100008938218479" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://www.instagram.com/dnllrshmy/" class="instagram"><i class="bi bi-instagram"></i></a>
       </div>
-
     </div>
   </header>
 
   <main class="main">
+    <!-- Hero Section with White Background and Rotating Light Pink Polygons -->
+    <section id="hero" class="hero section">
+      <!-- Rotating Polygons (10) -->
+      <div class="rotating-object polygon" style="top: 10%; left: 10%; animation-delay: 0s;"></div>
+      <div class="rotating-object polygon" style="top: 20%; left: 40%; animation-delay: 0.2s;"></div>
+      <div class="rotating-object polygon" style="top: 30%; left: 70%; animation-delay: 0.4s;"></div>
+      <div class="rotating-object polygon" style="top: 50%; left: 20%; animation-delay: 0.6s;"></div>
+      <div class="rotating-object polygon" style="top: 60%; left: 80%; animation-delay: 0.8s;"></div>
+      <div class="rotating-object polygon" style="top: 75%; left: 15%; animation-delay: 1s;"></div>
+      <div class="rotating-object polygon" style="top: 30%; left: 90%; animation-delay: 1.2s;"></div>
+      <div class="rotating-object polygon" style="top: 40%; left: 50%; animation-delay: 1.4s;"></div>
+      <div class="rotating-object polygon" style="top: 80%; left: 25%; animation-delay: 1.6s;"></div>
+      <div class="rotating-object polygon" style="top: 10%; left: 60%; animation-delay: 1.8s;"></div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section py-5" style="background-color: #f4f4f4;">
-      <div class="container" data-aos-delay="100">
-        <div class="row align-items-center">
+      <div class="container centered-content" data-aos-delay="100">
+        <div class="row justify-content-center align-items-center">
           <!-- Text Content -->
-          <div class="col-lg-6">
-            <h2>Danielle Irish May Martinez</h2>
+          <div class="col-lg-6 centered-content">
+            <h2 class="typewriter">Danielle Irish May Martinez</h2>
             <p>Designing with creativity, developing with precision.</p>
             <a href="about.html">
               <button type="button" class="btn btn-outline-dark">About Me</button>
             </a>
           </div>
           <!-- Image with Larger Size -->
-          <div class="col-lg-6 text-lg-end text-center mt-4 mt-lg-0">
-            <img src="/assets/images/dan.jpg" class="img-fluid img-hero" alt="Danielle">
+          <div class="col-lg-6 text-lg-center text-center mt-4 mt-lg-0">
+            <img id="prof_img" src="/assets/images/dan.jpg" class="img-fluid img-hero" alt="Danielle">
           </div>
+        </div>
       </div>
     </section><!-- /Hero Section -->
-
   </main>
-  
 
   <footer id="footer" class="footer light-background">
-
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Danielle</strong> <span>All Rights Reserved<br></span></p>
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Danielle</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href="https://x.com/irishmay_mrtnz"><i class="bi bi-twitter-x"></i></a>
@@ -93,19 +98,14 @@
         <a href="https://www.instagram.com/dnllrshmy/"><i class="bi bi-instagram"></i></a>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-
   </footer>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

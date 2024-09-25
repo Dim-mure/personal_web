@@ -232,62 +232,6 @@ h6 {
   .navmenu .active:focus {
     color: var(--nav-hover-color);
   }
-
-  .navmenu .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: 14px;
-    top: 130%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .navmenu .dropdown ul li {
-    min-width: 200px;
-  }
-
-  .navmenu .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    color: var(--nav-dropdown-color);
-  }
-
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
-  }
-
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-
-  .navmenu .dropdown .dropdown ul {
-    top: 0;
-    left: -90%;
-    visibility: hidden;
-  }
-
-  .navmenu .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: 0;
-    left: -100%;
-    visibility: visible;
-  }
 }
 
 /* Mobile Navigation */
@@ -688,200 +632,358 @@ body {
     margin-right: 0;
   }
 }
+
+/*3D SECTION
+    /* White Background */
+    #hero {
+      position: relative;
+      background: #fff; /* White background */
+      box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.6), 0 8px 16px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Light Pink Polygons */
+    .rotating-object {
+      position: absolute;
+      border-radius: 10%;
+      background: rgba(255, 182, 193, 0.5); /* Light pink color */
+      animation: rotate 8s infinite linear;
+      z-index: 1; /* Ensure polygons are below the content */
+    }
+
+    /* Polygon styling */
+    .polygon {
+      width: 100px;
+      height: 100px;
+    }
+
+    /* Rotation Animation */
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        transform: rotate(180deg) scale(1.2);
+      }
+      100% {
+        transform: rotate(360deg) scale(1);
+      }
+    }
+
+    /* Typewriter Animation */
+    .typewriter {
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 0 auto;
+      display: inline-block; /* Prevent line break */
+      animation: typing 4s steps(30, end) infinite; /* Continuous loop */
+    }
+
+    @keyframes typing {
+      0% { width: 0; }
+      50% { width: 100%; }
+      100% { width: 100%; } /* Keep name fully visible */
+    }
+
+    .img-hero {
+      position: relative;
+      z-index: 2; /* Ensure image is above the polygons */
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Button Styling */
+    .btn-outline-dark {
+      background: linear-gradient(145deg, #ffe4e9, #fff5f8);
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: #000;
+      position: relative;
+      z-index: 3; /* Ensure button is above polygons */
+    }
+
+    .btn-outline-dark:hover {
+      background: #ffd1dc;
+      color: #fff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .header, .footer {
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .centered-content {
+      text-align: center;
+      z-index: 3; /* Ensure text is above polygons */
+    }
+/* end of 3D
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
-.resume .resume-title {
-  color: var(--heading-color);
-  font-size: 26px;
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+  /* General style for white background */
+  body.resume-page {
+    background-color: white;
+    position: relative;
+  }
 
-.resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid var(--accent-color);
-  position: relative;
-}
+  /* Resume content alignment */
+  .resume .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
 
-.resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-bottom: 10px;
-}
+  .resume .resume-title {
+    color: var(--heading-color);
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-.resume .resume-item h5 {
-  font-size: 16px;
-  padding: 5px 15px;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
+  .resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid var(--accent-color);
+    position: relative;
+    text-align: left;
+  }
 
-.resume .resume-item ul {
-  padding-left: 20px;
-}
+  .carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+  }
 
-.resume .resume-item ul li {
-  padding-bottom: 10px;
-}
+  .carousel {
+    background-color: rgb(245, 201, 208); /* Light gray background for the carousel */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
-.resume .resume-item:last-child {
-  padding-bottom: 0;
-}
+  .carousel-inner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: var(--background-color);
-  border: 2px solid var(--accent-color);
-}
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .resume .container {
+      padding: 10px;
+    }
+
+    .resume .resume-item {
+      padding: 0 0 10px 10px;
+    }
+  }
+
 
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
-.portfolio .portfolio-filters {
-  padding: 0;
-  margin: 0 auto 20px auto;
-  list-style: none;
-  text-align: center;
+/* Portfolio Section */
+.portfolio {
+  position: relative;
+  z-index: 2; /* Ensure portfolio content is above polygons */
+  padding: 40px 0; /* Adjust as needed */
+  background-color: transparent; /* Keep the portfolio section transparent */
 }
 
-.portfolio .portfolio-filters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 8px 20px 10px 20px;
-  margin: 0;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1;
-  margin-bottom: 5px;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  font-family: var(--heading-font);
+/* Content Wrapper - White Background */
+.portfolio .content-wrapper {
+  background-color: white; /* White background only for content, not the entire section */
+  padding: 20px; /* Optional padding */
+  border-radius: 10px; /* Optional: Rounding the corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for content */
 }
 
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
-}
-
-.portfolio .portfolio-filters li:first-child {
-  margin-left: 0;
-}
-
-.portfolio .portfolio-filters li:last-child {
-  margin-right: 0;
-}
-
-@media (max-width: 575px) {
-  .portfolio .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 0 10px 0;
-  }
-}
-
+/* Portfolio Placeholder - Add Pink Shadow */
 .portfolio .portfolio-item {
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 15px rgba(255, 192, 203, 0.5); /* Soft pink shadow */
+  border-radius: 10px; /* Optional: Rounding the corners */
+  transition: all 0.3s ease-in-out;
 }
 
-.portfolio .portfolio-item .portfolio-info {
-  opacity: 0;
+/* Hover effect for placeholders */
+.portfolio .portfolio-item:hover {
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.7); /* Darker pink shadow on hover */
+  transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+/* Polygons */
+#polygons {
   position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: -100%;
-  z-index: 3;
-  transition: all ease-in-out 0.5s;
-  background: color-mix(in srgb, var(--surface-color), transparent 10%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure polygons are behind the content */
+  overflow: hidden;
+}
+
+.polygon {
+  fill: rgba(255, 192, 203, 0.5); /* Light pink with transparency */
+  animation: move 10s infinite alternate; /* Animation for polygons */
+}
+
+/* Animation for polygons */
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(10px, 10px);
+  }
+}
+
+/* Ensure main content is above polygons */
+.main {
+  position: relative;
+  z-index: 2; /* Content above the polygons */
+}
+
+
+/* Background Polygons */
+#polygons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows interaction with elements above */
+  overflow: hidden;
+  z-index: 1; /* Ensure polygons are behind the content */
+}
+
+.polygon {
+  fill: rgba(255, 192, 203, 0.5); /* Light pink with transparency */
+  animation: move 10s infinite alternate; /* Animation for polygons */
+}
+
+/* Animation for polygons */
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(10px, 10px);
+  }
+}
+
+/* Ensure the main content is above the polygons */
+.main {
+  position: relative;
+  z-index: 2; /* Content above the polygons */
+  background-color: white; /* White background for the main content */
+}
+/* Background Polygons */
+/* Polygons Style */
+#polygons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.polygon {
+  fill: rgba(255, 192, 203, 0.3); /* Light Pink */
+  stroke: rgba(255, 192, 203, 0.5);
+  stroke-width: 2;
+  animation: movePolygon 15s infinite ease-in-out;
+}
+
+@keyframes movePolygon {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Adjust polygon size, animation, and positions */
+.polygon:nth-child(1) { animation-duration: 12s; transform: scale(1.6); }
+.polygon:nth-child(2) { animation-duration: 18s; transform: scale(1.3); }
+.polygon:nth-child(3) { animation-duration: 20s; transform: scale(1.2); }
+.polygon:nth-child(4) { animation-duration: 14s; transform: scale(1.5); }
+.polygon:nth-child(5) { animation-duration: 16s; transform: scale(1.4); }
+.polygon:nth-child(6) { animation-duration: 19s; transform: scale(1.7); }
+.polygon:nth-child(7) { animation-duration: 17s; transform: scale(1.8); }
+.polygon:nth-child(8) { animation-duration: 13s; transform: scale(1.9); }
+.polygon:nth-child(9) { animation-duration: 15s; transform: scale(1.3); }
+.polygon:nth-child(10) { animation-duration: 21s; transform: scale(1.5); }
+/* Repeat for new polygons */
+.polygon:nth-child(11) { animation-duration: 22s; transform: scale(1.6); }
+.polygon:nth-child(12) { animation-duration: 20s; transform: scale(1.4); }
+.polygon:nth-child(13) { animation-duration: 18s; transform: scale(1.7); }
+.polygon:nth-child(14) { animation-duration: 24s; transform: scale(1.5); }
+.polygon:nth-child(15) { animation-duration: 19s; transform: scale(1.8); }
+.polygon:nth-child(16) { animation-duration: 25s; transform: scale(1.9); }
+
+
+/* Ensure the main content is above the polygons */
+.main {
+  position: relative;
+  z-index: 2; /* Content above the polygons */
+  background-color: white; /* White background for the main content */
+}
+
+.portfolio {
+  position: relative; /* Ensure portfolio section is positioned correctly */
+  z-index: 2; /* Portfolio content above polygons */
+}
+
+
+
+.contact-container {
+  background-color: white; /* White background */
+  padding: 30px 0;
+  position: relative; /* For polygons to stay behind content */
+}
+
+.info-item {
+  background-color: rgba(255, 192, 203, 0.3); /* Light pink with transparency */
+  border-radius: 8px;
   padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(255, 192, 203, 0.5); /* Pink shadow for each card */
 }
 
-.portfolio .portfolio-item .portfolio-info h4 {
+.info-item h3 {
+  background-color: rgba(255, 182, 193, 0.8); /* Light pink background for title */
+  padding: 10px;
+  border-radius: 5px;
   font-size: 18px;
-  font-weight: 600;
-  padding-right: 50px;
 }
 
-.portfolio .portfolio-item .portfolio-info p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-size: 14px;
-  margin-bottom: 0;
-  padding-right: 50px;
+.btn-primary {
+  background-color: #ff6f91; /* Pink button background */
+  border-color: #ff4f7a;
 }
 
-.portfolio .portfolio-item .portfolio-info .preview-link,
-.portfolio .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 50px;
-  font-size: 24px;
-  top: calc(50% - 14px);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  transition: 0.3s;
-  line-height: 0;
+.btn-primary:hover {
+  background-color: #ff4f7a;
+  border-color: #ff3060;
 }
-
-.portfolio .portfolio-item .portfolio-info .preview-link:hover,
-.portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: var(--accent-color);
-}
-
-.portfolio .portfolio-item .portfolio-info .details-link {
-  right: 14px;
-  font-size: 28px;
-}
-
-.portfolio .portfolio-item:hover .portfolio-info {
-  opacity: 1;
-  bottom: 0;
-}
-
-    .contact-container {
-      background-color: #f0f0f0; /* Light gray background */
-      background-image: url('assets/img/contact-bg.jpg'); /* Replace with your image path */
-      background-size: cover;
-      background-position: center;
-      padding: 30px 0;
-    }
-
-    .info-item {
-      background-color: rgba(138, 0, 0, 0.529); /* White background with opacity */
-      border-radius: 8px;
-      padding: 15px;
-      margin-bottom: 15px;
-    }
-
-    .info-item i {
-      font-size: 24px;
-      color: #333;
-    }
-
-    .info-item h3 {
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
-
-    .btn-primary {
-      background-color: #767c83a2;
-      border-color: #515457a9;
-    }
-
-    .btn-primary:hover {
-      background-color: #0056b3;
-      border-color: #004085;
-    }
 
 
 /*--------------------------------------------------------------
@@ -903,11 +1005,6 @@ body {
       text-align: left;
     }
 
-    .profile-image {
-      float: right;
-      margin-left: 30px;
-    }
-
 }
 
 .carousel-wrapper {
@@ -922,4 +1019,337 @@ body {
 .img-thumbnail {
   max-width: 100%;
   height: auto;
+}
+
+/*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+.skills .progress {
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+
+.skills .progress .skill {
+  color: var(--heading-color);
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: var(--heading-font);
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  height: 10px;
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Stats Section
+--------------------------------------------------------------*/
+.stats .stats-item {
+  padding: 30px;
+  width: 100%;
+}
+
+.stats .stats-item span {
+  color: var(--heading-color);
+  font-size: 48px;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.stats .stats-item span:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.stats .stats-item p {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  padding: 0;
+  margin: 0;
+  font-family: var(--heading-font);
+  font-weight: 500;
+}
+/*ABOUT*/
+/* Body Styling */
+body {
+  background-color: white; /* Set the background to white */
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+/* About Section Styling */
+.about {
+  padding: 80px 0;
+  position: relative; /* Needed for the polygons */
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.about::before,
+.about::after {
+  content: '';
+  position: absolute;
+  background-color: lightpink;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 80%);
+  opacity: 0.5;
+  z-index: 0; /* Make sure it shows up behind content */
+}
+
+.about::before {
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+}
+
+.about::after {
+  bottom: 0;
+  right: 0;
+  width: 250px;
+  height: 250px;
+}
+.about {
+  position: relative;
+  background-color: white;
+  padding: 80px 0;
+  overflow: hidden; /* To ensure polygons stay inside the section */
+}
+
+.about .polygon {
+  position: absolute;
+  background-color: lightpink;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  opacity: 0.7;
+  animation: movePolygon 10s infinite alternate;
+  z-index: -1; /* Ensure it's behind content */
+}
+
+/* Animate the polygons */
+@keyframes movePolygon {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(50px, 30px) scale(1.2) rotate(45deg);
+  }
+  100% {
+    transform: translate(-50px, -30px) scale(1) rotate(90deg);
+  }
+}
+
+/* Example polygon placements */
+.about .polygon.one {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: -50px;
+}
+
+.about .polygon.two {
+  width: 250px;
+  height: 250px;
+  bottom: -50px;
+  right: -50px;
+}
+
+/* Section Title */
+.about .section-title h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  color: lightpink;
+}
+
+.about .section-title p {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* About Image Styling */
+.about img {
+  width: 320px; 
+  height: 320px;
+  border-radius: 50%;
+  border: 5px solid lightpink;
+  box-shadow: 0 10px 25px rgba(255, 182, 193, 0.3), 0 0 0 5px lightpink; 
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.about img:hover {
+  transform: scale(1.05); /* Add a slight hover effect for interactivity */
+}
+
+/* Content Styling */
+.content h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #555;
+  position: relative;
+  z-index: 1;
+}
+
+/* List Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+ul li strong {
+  color: lightpink; /* Highlighted in pink for consistency */
+}
+
+.bi-chevron-right {
+  color: #ff69b4;
+}
+
+/* Skills Section */
+.skills-content .progress {
+  background-color: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.skills-content .progress .progress-bar {
+  background-image: linear-gradient(45deg, #ff69b4, lightpink); /* Add a gradient for a modern effect */
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: width 0.6s ease;
+}
+
+.skills-content .progress-bar:hover {
+  opacity: 0.85; /* Slight effect when hovered */
+}
+
+.skills-content .progress span.skill {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.skills-content .progress span.val {
+  float: right;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ddd;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about .content {
+    text-align: center;
+  }
+
+  .content h2 {
+    font-size: 24px;
+  }
+}
+.about {
+  position: relative;
+  background-color: white;
+  padding: 80px 0;
+  overflow: hidden; /* Ensure polygons stay inside the section */
+}
+
+.about .polygon {
+  position: absolute;
+  background-color: lightpink;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  opacity: 0.7;
+  animation: movePolygon 10s infinite alternate;
+  z-index: -1; /* Ensure it's behind content */
+}
+
+/* Animate the polygons */
+@keyframes movePolygon {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(50px, 30px) scale(1.2) rotate(45deg);
+  }
+  100% {
+    transform: translate(-50px, -30px) scale(1) rotate(90deg);
+  }
+}
+
+/* Example polygon placements */
+.about .polygon.one {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: -50px;
+}
+
+.about .polygon.two {
+  width: 250px;
+  height: 250px;
+  bottom: -50px;
+  right: -50px;
 }
