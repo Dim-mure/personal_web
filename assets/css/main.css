@@ -725,67 +725,68 @@ body {
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
-  /* General style for white background */
-  body.resume-page {
-    background-color: white;
-    position: relative;
-  }
+ /* General style for white background */
+.resume {
+  background-color: white;
+}
 
-  /* Resume content alignment */
+/* Resume content alignment */
+.resume .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.resume .resume-title {
+  color: var(--heading-color);
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid var(--accent-color);
+  position: relative;
+  text-align: left;
+}
+
+/* Carousel Styles */
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.carousel {
+  background-color: rgb(245, 201, 208); /* Light gray background for the carousel */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
   .resume .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .resume .resume-title {
-    color: var(--heading-color);
-    font-size: 26px;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 20px;
+      padding: 10px;
   }
 
   .resume .resume-item {
-    padding: 0 0 20px 20px;
-    margin-top: -2px;
-    border-left: 2px solid var(--accent-color);
-    position: relative;
-    text-align: left;
-  }
-
-  .carousel-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0;
-  }
-
-  .carousel {
-    background-color: rgb(245, 201, 208); /* Light gray background for the carousel */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .carousel-inner img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
-    .resume .container {
-      padding: 10px;
-    }
-
-    .resume .resume-item {
       padding: 0 0 10px 10px;
-    }
   }
+}
+
 
 
 /*--------------------------------------------------------------
