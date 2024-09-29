@@ -754,15 +754,17 @@ body {
   text-align: left;
 }
 
-/* Carousel Styles */
 .carousel-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center horizontally */
   align-items: center;
   margin: 40px 0;
+  width: 100%; /* Make it full width */
 }
 
 .carousel {
+  width: 90%; /* Adjust width as needed, 90% is an example */
+  max-width: 800px; /* Set a max width for larger screens */
   background-color: rgb(245, 201, 208); /* Light gray background for the carousel */
   padding: 20px;
   border-radius: 10px;
@@ -770,11 +772,12 @@ body {
 }
 
 .carousel-inner img {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
   display: block;
   margin: 0 auto;
 }
+
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
